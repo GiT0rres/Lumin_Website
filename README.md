@@ -249,9 +249,9 @@ Conheça as pessoas envolvidas no desenvolvimento do Lumin e suas atribuições 
 | Integrante | GitHub | Atribuição |
 |:---|:---|:---|
 | **Antonio Sena** | [@AntonioSena0](https://github.com/AntonioSena0) | Back-end |
-| **Arthur Gutemberg** | [@ArthurGutemberg9](https://github.com/ArthurGutemberg9) | A definir |
-| **Beatriz Galdino** | [@Beatriz1S05](https://github.com/Beatriz1S05) | Wireframe e Front-end |
-| **Giovanna Torres** | [@GiT0rres](https://github.com/GiT0rres) | A definir |
+| **Arthur Gutemberg** | [@ArthurGutemberg9](https://github.com/ArthurGutemberg9) | Video |
+| **Beatriz Galdino** | [@Beatriz1S05](https://github.com/Beatriz1S05) | Vídeo |
+| **Giovanna Torres** | [@GiT0rres](https://github.com/GiT0rres) | Wireframe e Front-end |
 
 <sub>As atribuições marcadas como “A definir” vão ser atualizadas conforme a divisão oficial de responsabilidades da equipe.</sub>
 
