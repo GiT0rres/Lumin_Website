@@ -15,6 +15,11 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Dashboard
                     </x-nav-link>
+                    @can('admin')
+                        <x-nav-link :href="route('admin.recommendations.index')" :active="request()->routeIs('admin.*')">
+                            Recomendações
+                        </x-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -70,6 +75,11 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 Dashboard
             </x-responsive-nav-link>
+            @can('admin')
+                <x-responsive-nav-link :href="route('admin.recommendations.index')" :active="request()->routeIs('admin.*')">
+                    Recomendações
+                </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->

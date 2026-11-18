@@ -292,6 +292,38 @@
             </div>
         </section>
 
+        {{-- ===== Contato: recomendações para os admins ===== --}}
+        <section id="contato" class="mx-auto max-w-6xl px-6 pb-24">
+            <span class="eyebrow reveal" data-reveal>Contato</span>
+            <h2 class="section-title reveal" data-reveal>Envie uma recomendação</h2>
+            <p class="reveal mt-3 text-sm text-white/60" data-reveal>Sugestões de melhorias chegam direto para a equipe avaliar.</p>
+
+            <form method="POST" action="{{ route('recommendations.store') }}" class="panel reveal mt-10 grid gap-4 p-6 sm:grid-cols-2" data-reveal>
+                @csrf
+                @if (session('contact_status'))
+                    <p class="flex items-center gap-2 text-sm text-lumin-cyan sm:col-span-2"><x-icon name="check" class="size-4" /> {{ session('contact_status') }}</p>
+                @endif
+                <div>
+                    <x-input-label for="contact_name" value="Nome" />
+                    <x-text-input id="contact_name" name="name" :value="old('name')" required maxlength="255" class="mt-1" />
+                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                </div>
+                <div>
+                    <x-input-label for="contact_email" value="E-mail" />
+                    <x-text-input id="contact_email" type="email" name="email" :value="old('email')" required maxlength="255" class="mt-1" />
+                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                </div>
+                <div class="sm:col-span-2">
+                    <x-input-label for="contact_message" value="Recomendação" />
+                    <textarea id="contact_message" name="message" rows="4" required maxlength="2000" class="mt-1 block w-full rounded-xl border-0 bg-white/[0.07] px-4 py-3 text-sm text-white placeholder-white/30 ring-1 ring-white/10 transition focus:bg-white/10 focus:ring-2 focus:ring-lumin-magenta">{{ old('message') }}</textarea>
+                    <x-input-error :messages="$errors->get('message')" class="mt-2" />
+                </div>
+                <div class="sm:col-span-2">
+                    <button type="submit" class="btn-brand">Enviar <x-icon name="arrow-right" class="size-4" /></button>
+                </div>
+            </form>
+        </section>
+
         {{-- ===== Chamada final ===== --}}
         <section class="mx-auto max-w-6xl px-6 pb-24">
             <div class="reveal bg-glow relative overflow-hidden rounded-3xl border border-white/10 bg-surface px-8 py-14 text-center" data-reveal>
